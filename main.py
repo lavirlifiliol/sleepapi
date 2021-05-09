@@ -5,7 +5,7 @@ app = FastAPI()
 @app.get('/sleep')
 async def sleep(time: int) -> str:
     """
-    wait for `time` seconds
+    wait for at least `time` seconds
     """
     start = perf_counter()
     await asyncio.sleep(time)
