@@ -12,8 +12,10 @@ spec:
       labels:
         app: sleepapi
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
       - name: sleepapi
-        image: lakmatiol.azurecr.io/sleepapi:v1
+        image: lakmatiol.azurecr.io/sleepapi:latest
         ports:
         - containerPort: 8080
