@@ -9,5 +9,5 @@ async def sleep(time: int) -> str:
     """
     start = perf_counter()
     await asyncio.sleep(time)
-    return f'took {perf_counter() - start:.2} seconds'
+    return f'took {perf_counter() - start:.4} seconds'
 
