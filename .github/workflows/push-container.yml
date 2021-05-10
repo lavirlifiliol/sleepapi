@@ -2,6 +2,7 @@ name: ci
 on:
     push:
         branches: master
+    workflow_dispatch:
 
 jobs:
     push:
@@ -15,7 +16,7 @@ jobs:
           with:
               registry: lakmatiol.azurecr.io
               username: ${{ secrets.ACR_LOGIN }}
-              password: ${{ secrets.ACR_passwd }}
+              password: ${{ secrets.ACR_PASSWD }}
 
         - name: Push to ACR
           uses: docker/build-push-action@v2
