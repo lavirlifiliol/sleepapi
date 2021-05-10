@@ -15,4 +15,6 @@ jobs:
               registry: lakmatiol.azurecr.io
               username: ${{ secrets.ACR_LOGIN }}
               password: ${{ secrets.ACR_passwd }}
+              repository: sleepapi
+              tag_with_ref: true
 
